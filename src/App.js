@@ -1,4 +1,5 @@
 import "./styles.css";
+import UserPicker from "./UserPicker";
 import useSize from "./UseSize";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <p>
         Window size width:{size.width}: height:{size.height}
       </p>
+      <UserPicker />
     </div>
   );
 }
