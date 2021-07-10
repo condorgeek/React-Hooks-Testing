@@ -4,6 +4,7 @@ const getData = (url) => {
   return fetch(url)
     .then((response) => {
       if (!response.ok) {
+        console.log("Error", response);
         throw new Error("Failed fetching data on " + url);
       }
       return response.json();
@@ -27,7 +28,7 @@ const useFetch = (url) => {
         setStatus("success");
       })
       .catch((error) => {
-        setError(error);
+        setError(JSON.stringify(error));
         setStatus("error");
       });
   }, [url]);
