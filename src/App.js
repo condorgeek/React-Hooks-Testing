@@ -1,3 +1,4 @@
+import QuoteGenerator from "./QuoteGenerator";
 import "./styles.css";
 import UserPicker from "./UserPicker";
 import useSize from "./UseSize";
@@ -13,6 +14,7 @@ export default function App() {
         Window size width:{size.width}: height:{size.height}
       </p>
       <UserPicker />
+      <QuoteGenerator />
     </div>
   );
 }
